@@ -1,0 +1,118 @@
+/* SimulationConfigForm.css */
+.simulation-config-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .form-step {
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .input-group input[type="text"],
+  .input-group select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #0052a3;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .input-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .driver-input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+  }
+  
+  .compounds-input {
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+  
+  .compound-selector {
+    margin-bottom: 5px;
+  }
+  
+  h3, h4 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  h5 {
+    margin: 10px 0;
+  }
+  
+  h6 {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .quali-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Changed from 70px to 0 */
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .quali-inputs .input-group {
+    margin-bottom: 5px;
+    min-width: 0; /* This is crucial to prevent overflow */
+    overflow: hidden; /* Optional additional protection */
+  }
+  
+  .quali-inputs input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
+    min-width: 0; /* Override browser's intrinsic sizing */
+  }
+  
