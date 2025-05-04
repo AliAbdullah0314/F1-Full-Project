@@ -42,8 +42,8 @@ const useRaceSimulation = (trackCoordinates) => {
             const selected_round = data.metadata.selected_round
 
             const apiUrl = year === 2024
-                ? `http://localhost:8000/api/drivers/${year}/${selected_round}`
-                : `http://localhost:8000/api/drivers/${year}`;
+                ? `${process.env.REACT_APP_API_BASE_URL}/api/drivers/${year}/${selected_round}`
+                : `${process.env.REACT_APP_API_BASE_URL}/api/drivers/${year}`;
 
             const response = await fetch(apiUrl);
             const driversJson = await response.json();

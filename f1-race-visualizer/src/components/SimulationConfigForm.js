@@ -47,8 +47,8 @@ const SimulationConfigForm = ({ onSubmit, onTrackChange, selectedTrack }) => {
       try {
         // Construct API URL based on year and round
         const apiUrl = formData.year === '2024'
-          ? `http://localhost:8000/api/drivers/${formData.year}/${trackToRound2024[formData.round]}`
-          : `http://localhost:8000/api/drivers/${formData.year}`;
+          ? `${process.env.REACT_APP_API_BASE_URL}/api/drivers/${formData.year}/${trackToRound2024[formData.round]}`
+          : `${process.env.REACT_APP_API_BASE_URL}/api/drivers/${formData.year}`;
 
         const response = await fetch(apiUrl);
         const data = await response.json();
