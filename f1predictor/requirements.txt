@@ -1,2 +1,2 @@
---find-links https://download.pytorch.org/whl/cpu
+--index-url https://download.pytorch.org/whl/cpu
 torch
