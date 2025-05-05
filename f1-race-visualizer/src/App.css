@@ -1,17 +1,50 @@
-/* App.css */
+/* App.css - Dark Theme */
+
+@font-face {
+  font-family: "Formula1-Regular";
+  src: local("Formula1-Regular"),
+    url("./fonts/Formula1/Formula1-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Formula1-Bold";
+  src: local("Formula1-Bold"),
+    url("./fonts/Formula1/Formula1-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Formula1-Wide";
+  src: local("Formula1-Wide"),
+    url("./fonts/Formula1/Formula1-Wide.ttf") format("truetype");
+}
+
+.f1-regular {
+  font-family: "Formula1-Regular", sans-serif;
+}
+
+.f1-bold {
+  font-family: "Formula1-Bold", sans-serif;
+}
+
 :root {
-  --primary-color: #0066cc;
-  --secondary-color: #f0f0f0;
-  --dark-bg: rgba(0, 0, 0, 0.8);
-  --light-text: white;
+  --primary-color: #1e90ff; /* Dodger Blue for primary accent */
+  --secondary-color: #121212; /* Dark background for containers */
+  --dark-bg: #181818; /* Slightly lighter dark background */
+  --light-text: #e0e0e0; /* Light gray text for readability */
   --border-radius: 10px;
+  --table-header-bg: #222222;
+  --table-row-bg: #1a1a1a;
+  --table-row-hover-bg: #333333;
+  --button-hover-bg: #104e8b;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Formula1-Regular", 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--secondary-color);
+  color: var(--light-text);
 }
 
 .app-container {
@@ -23,6 +56,7 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: var(--light-text);
 }
 
 .race-display-container {
@@ -35,8 +69,8 @@ h1 {
 .track-container {
   flex: 2;
   position: relative;
-  border: 1px solid #ddd;
-  background-color: #f5f5f5;
+  border: 1px solid #444;
+  background-color: var(--dark-bg);
   border-radius: var(--border-radius);
   overflow: hidden;
   min-height: 300px;
@@ -53,7 +87,7 @@ h1 {
 }
 
 .controls-container {
-  background-color: var(--secondary-color);
+  background-color: var(--dark-bg);
   padding: 15px;
   border-radius: var(--border-radius);
   margin-top: 20px;
@@ -61,7 +95,7 @@ h1 {
 
 .standings-table {
   width: 100%;
-  color: white;
+  color: var(--light-text);
   border-collapse: collapse;
 }
 
@@ -69,12 +103,20 @@ h1 {
 .standings-table td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #444;
 }
 
 .standings-table th {
-  background-color: #222;
+  background-color: var(--table-header-bg);
   font-weight: bold;
+}
+
+.standings-table tr:hover {
+  background-color: var(--table-row-hover-bg);
+}
+
+.standings-table tr {
+  background-color: var(--table-row-bg);
 }
 
 .team-color {
@@ -83,21 +125,24 @@ h1 {
   height: 16px;
   margin-right: 8px;
   vertical-align: middle;
+  border-radius: 2px;
 }
 
 button {
+  font-family: "Formula1-Regular", 'Arial', sans-serif;
   padding: 8px 16px;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--light-text);
   border: none;
   border-radius: 4px;
   cursor: pointer;
   margin-right: 10px;
   margin-bottom: 10px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0052a3;
+  background-color: var(--button-hover-bg);
 }
 
 /* Media Queries for Responsiveness */
@@ -137,7 +182,8 @@ button:hover {
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9em;
-  color: white;
+  color: var(--light-text);
+  transition: background-color 0.3s ease;
 }
 
 .lap-chapter:hover {

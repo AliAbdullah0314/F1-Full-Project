@@ -16,25 +16,26 @@ const TrackVisualizer = ({ trackCoordinates, drivers, isPlaying, raceFinished })
       const position = getPositionFromPercentage(driver.lastProgress, trackCoordinates);
       
       return (
-        <React.Fragment key={index}>
+        <React.Fragment className = {"f1-regular"} key={index}>
           <Circle
             x={position[0]}
             y={position[1]}
             radius={12}
             fill={driver.color}
-            stroke="white"
+            stroke="black"
             strokeWidth={2}
           />
           <Text
+            
             x={position[0] - 6}
             y={position[1] - 7}
             text={driver.name.charAt(0)}
             fill="black"
             fontSize={15}
-            fontStyle = 'bold'
+            fontFamily="Formula1-Bold"
             align="center"
             stroke="white"
-            strokeWidth = {0.3}
+            strokeWidth = {0.5}
             
           />
         </React.Fragment>
@@ -95,7 +96,7 @@ const TrackVisualizer = ({ trackCoordinates, drivers, isPlaying, raceFinished })
           <Line
             points={trackPoints}
             closed={true}
-            stroke="#333"
+            stroke="#ddd"
             strokeWidth={15}
           />
           

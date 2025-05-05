@@ -26,7 +26,7 @@ const StandingsTable = ({ drivers }) => {
       return {
         index,
         driver: driver.name,
-        team: `Lap ${driver.current_lap + 1}`,
+        team: `${driver.current_lap + 1}`,
         color: driver.color,
         totalProgress: driver.current_lap + progressInLap,
         totalTime: driver.current_time
